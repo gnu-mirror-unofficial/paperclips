@@ -3,7 +3,7 @@
    (C) Tapsell-Ferrier Limited 2002
 -->
 
-<!ELEMENT server          (warpath, tcp, host+)
+<!ELEMENT server          (warpath, tcp, host+)>
  
 <!ELEMENT warpath         (EMPTY)>
 <!ATTLIST warpath         path CDATA #REQUIRED>
