@@ -65,7 +65,7 @@
 
 
 <!ELEMENT servlet         (servlet-name, display-name?, description?,
-                           servlet-class, init-param*, load-on-startup?)
+                           servlet-class, init-param*, load-on-startup?)>
 
 <!ELEMENT servlet-name    (#PCDATA)>
  
