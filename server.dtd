@@ -1,0 +1,99 @@
+<!-- 
+   Paperclips server.dtd
+   (C) Tapsell-Ferrier Limited 2002
+-->
+ 
+<!ELEMENT warpath         (EMPTY)>
+<!ATTLIST warpath         path CDATA #REQUIRED>
+
+
+<!ELEMENT host            (log?, mapping+)>
+<!ATTLIST host            name CDATA>
+
+
+<!ELEMENT log             (file)>
+<!ELEMENT file            (#PCDATA)>
+
+
+<!ELEMENT mapping         (file-dir | web-app)>
+<!ATTLIST mapping         pattern CDATA #REQUIRED>
+
+<!ELEMENT file-dir        (EMPTY)>
+<!ATTLIST file-dir        name CDATA #REQUIRED>
+
+
+<!-- the web-app is very similar to web-app supported by web.xml -->
+<!ELEMENT web-app         (context-param*, filter*, filter-mapping*, 
+                           listener*, servlet*, servlet-mapping*, 
+                           session-config?, mime-mapping*,
+                           welcome-file-list?)
+
+<!-- paperclips web-app dtd -->
+<!ELEMENT context-param   (param-name, param-value, description?)>
+
+<!ELEMENT param-name      (#PCDATA)> 
+
+<!ELEMENT param-value     (#PCDATA)>
+
+
+
+<!ELEMENT filter          (filter-name, display-name?, description?,
+                           filter-class, init-param*)>
+
+<!ELEMENT description     (#PCDATA)> 
+
+<!ELEMENT display-name    (#PCDATA)>
+
+<!ELEMENT filter-name     (#PCDATA)>
+
+<!ELEMENT filter-class    (#PCDATA)>
+
+<!ELEMENT init-param      (param-name, param-value, description?)>
+
+
+
+<!ELEMENT filter-mapping  (filter-name, (url-pattern | servlet-name))>
+
+<!ELEMENT url-pattern     (#PCDATA)>
+
+
+
+<!ELEMENT listener        (listener-class)>
+
+<!ELEMENT listener-class  (#PCDATA)>
+
+
+
+<!ELEMENT servlet         (servlet-name, display-name?, description?,
+                           servlet-class, init-param*, load-on-startup?)
+
+<!ELEMENT servlet-name    (#PCDATA)>
+ 
+<!ELEMENT servlet-class   (#PCDATA)>
+
+<!ELEMENT load-on-startup (#PCDATA)>
+
+
+
+<!ELEMENT servlet-mapping (servlet-name, url-pattern)>
+
+
+
+
+<!ELEMENT mime-mapping (extension, mime-type)> 
+
+<!ELEMENT mime-type (#PCDATA)> 
+
+
+
+<!ELEMENT session-timeout (#PCDATA)>
+
+<!ELEMENT session-config (session-timeout?)>
+
+
+
+<!ELEMENT welcome-file-list (welcome-file+)>
+
+<!ELEMENT welcome-file (#PCDATA)>
+
+<!-- end of web-app DTD -->
