@@ -22,6 +22,7 @@
 
 
 <!ELEMENT mapping         (file-dir | web-app)>
+<!ATTLIST mapping         exclude CDATA "WEB-INF">
 <!ATTLIST mapping         pattern CDATA #REQUIRED>
 
 <!ELEMENT file-dir        (EMPTY)>
