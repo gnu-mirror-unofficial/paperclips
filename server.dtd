@@ -8,7 +8,7 @@
 
 
 <!ELEMENT host            (log?, mapping+)>
-<!ATTLIST host            name CDATA>
+<!ATTLIST host            name CDATA #IMPLIED "paperclips-root">
 
 
 <!ELEMENT log             (file)>
