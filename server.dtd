@@ -26,7 +26,7 @@
 <!ELEMENT web-app         (context-param*, filter*, filter-mapping*, 
                            listener*, servlet*, servlet-mapping*, 
                            session-config?, mime-mapping*,
-                           welcome-file-list?)
+                           welcome-file-list?)>
 
 <!-- paperclips web-app dtd -->
 <!ELEMENT context-param   (param-name, param-value, description?)>
